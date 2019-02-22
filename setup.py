@@ -12,7 +12,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'zeroinger_utils'
+NAME = 'zeroinger'
 DESCRIPTION = 'group of utils 4 python'
 URL = 'https://github.com/liangjz92/zeroinger-utils'
 EMAIL = 'liangjianzeng@qq.com   '
@@ -23,7 +23,8 @@ VERSION = None
 # What packages are required for this module to be executed?
 REQUIRED = [
     # 'requests', 'maya', 'records',
-    'dev'
+    'dev',
+    'test'
 ]
 
 # What packages are optional?
