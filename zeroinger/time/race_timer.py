@@ -24,7 +24,7 @@ class RaceTimer:
         :return: 
         """
         now = time.time()
-        self._points.append(now)
+        # self._points.append(now)
         return int(now * 1000 - self._start_time * 1000)
         pass
 
@@ -34,8 +34,8 @@ class RaceTimer:
         :return: 
         """
         self._start_time = time.time()
-        self._points = []
-        self._points.append(self._start_time)
+        # self._points = []
+        # self._points.append(self._start_time)
         pass
 
     def duriation(self):
