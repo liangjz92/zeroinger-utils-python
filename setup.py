@@ -13,7 +13,7 @@ from setuptools import find_packages, setup, Command
 
 # Package meta-data.
 NAME = 'zeroinger'
-DESCRIPTION = 'group of utils 4 python'
+DESCRIPTION = 'group of tools for data process'
 URL = 'https://github.com/liangjz92/zeroinger-utils'
 EMAIL = 'liangjianzeng@qq.com   '
 AUTHOR = 'liangjz'
@@ -23,8 +23,6 @@ VERSION = None
 # What packages are required for this module to be executed?
 REQUIRED = [
     # 'requests', 'maya', 'records',
-    'dev',
-    'test'
 ]
 
 # What packages are optional?
@@ -105,7 +103,7 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
-    packages=find_packages(exclude=('tests',)),
+    packages=find_packages(exclude=('test','dev',)),
     # If your package is a single module, use this instead of 'packages':
     # py_modules=['mypackage'],
 
