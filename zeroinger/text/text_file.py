@@ -1,3 +1,6 @@
+from logzero import logger
+
+
 class TextFile:
     def __init__(self):
         pass
@@ -28,6 +31,44 @@ class TextFile:
         """
         outf = open(file_path, 'w', encoding=encoding)
         for line in list_of_line:
-            outf.write(line + '\n')
+            if not line is None:
+                outf.write(line + '\n')
+        outf.close()
+        pass
+
+    @staticmethod
+    def load_dict(file_path, encoding='utf-8', delimiter='\t'):
+        """
+        文件中包含多行，每个多个元素，以 delimiter代表的字符作为分割，载入为dict
+        :param file_path: 
+        :param encoding: 
+        :param delimiter: 
+        :return: 
+        """
+        data = {}
+        inf = open(file_path, 'r', encoding=encoding)
+        for line in inf:
+            line = line.strip()
+            box = line.split(delimiter)
+            if len(box) == 2:
+                data[box[0]] = box[1]
+        inf.close()
+
+        return data
+
+    @staticmethod
+    def dump_dict(file_path, dict_data, encoding='utf-8', delimiter='\t'):
+        """
+        :param file_path: 
+        :param dict_data: 
+        :param encoding: 
+        :param delimiter: 
+        :return: 
+        """
+        outf = open(file_path, 'w', encoding=encoding)
+        for key in dict_data:
+            value = str(dict_data[key])
+            if value is not None:
+                outf.write('{}{}{}\n'.format(key, delimiter, value))
         outf.close()
         pass

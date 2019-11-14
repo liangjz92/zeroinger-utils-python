@@ -1,7 +1,7 @@
 import csv
 from logzero import logger
 
-from zeroinger.time.race_timer import RaceTimer
+from zeroinger.time import StopWatch
 
 
 class CSV:

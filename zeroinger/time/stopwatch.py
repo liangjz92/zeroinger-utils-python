@@ -5,7 +5,7 @@ import time
 """
 
 
-class RaceTimer:
+class StopWatch:
     def __init__(self):
         self.reset()
         pass
@@ -16,7 +16,7 @@ class RaceTimer:
         创建并返回一个空的计时器对象，并设定初始时间为当前时刻
         :return: 
         """
-        return RaceTimer()
+        return StopWatch()
 
     def snapshot(self):
         """
@@ -40,7 +40,7 @@ class RaceTimer:
 
     def duriation(self):
         """
-        计算当前时刻距离开始时刻过了多长时间
+        计算当前时刻距离开始时刻过了多长时间,返回毫秒时间
         :return: 
         """
         now = time.time()

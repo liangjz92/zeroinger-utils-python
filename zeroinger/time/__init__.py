@@ -1,2 +1,2 @@
-from .race_timer import RaceTimer
-__all__=['RaceTimer']
+from .stopwatch import StopWatch
+__all__=['StopWatch']
