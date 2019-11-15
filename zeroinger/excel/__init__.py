@@ -1,2 +1,3 @@
 from .csv import CSV
-__all__= ['CSV']
+from .xlsx import XLSX
+__all__= ['CSV','XLSX']

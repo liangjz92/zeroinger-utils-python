@@ -36,10 +36,10 @@ class XLSX:
             return []
         ret = []
         cache = sheet.array
-        if len(cache)<1:
+        if len(cache) < 1:
             return []
         keys = cache[0]
-        for i in range(1,len(cache)):
+        for i in range(1, len(cache)):
             data = {}
             for j in range(len(keys)):
                 data[keys[j]] = cache[i][j]

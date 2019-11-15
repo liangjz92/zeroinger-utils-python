@@ -20,7 +20,7 @@ class CSV:
         :param encoding: 
         :return: 
         """
-        timer = RaceTimer.create_instance()
+        timer = StopWatch.create_instance()
         logger.info(
             'start read csv\tpath: {}\tdelimiter: {}\tencoding: {}'.format(file_path, delimiter, encoding))
         list_of_dict = []
@@ -44,7 +44,7 @@ class CSV:
         :param headers: 
         :return: 
         """
-        timer = RaceTimer.create_instance()
+        timer = StopWatch.create_instance()
         logger.info('start write csv\tpath: {}\tdelimiter: {}\tencoding: {}\theaders: {}'.
                     format(file_path, delimiter, encoding, headers))
         if headers is None:
@@ -71,7 +71,7 @@ class CSV:
         :param encoding: 
         :return: 
         """
-        timer = RaceTimer.create_instance()
+        timer = StopWatch.create_instance()
         logger.info(
             'start read csv\tpath: {}\tdelimiter: {}\tencoding: {}'.format(file_path, delimiter, encoding))
         list_of_list = []
@@ -94,7 +94,7 @@ class CSV:
         :param encoding: 
         :return: 
         """
-        timer = RaceTimer.create_instance()
+        timer = StopWatch.create_instance()
         logger.info('start write csv\tpath: {}\tdelimiter: {}\tencoding: {}'.
                     format(file_path, delimiter, encoding))
         outf = open(file_path, 'w', encoding=encoding)
@@ -108,7 +108,7 @@ class CSV:
 
     @staticmethod
     def read_line_csv(file_path, delimiter=default_delimiter, encoding=default_encoding):
-        timer = RaceTimer.create_instance()
+        timer = StopWatch.create_instance()
         logger.info(
             'start read csv\tpath: {}\tdelimiter: {}\tencoding: {}'.format(file_path, delimiter, encoding))
         """
@@ -139,7 +139,7 @@ class CSV:
         :param encoding: 
         :return: 
         """
-        timer = RaceTimer.create_instance()
+        timer = StopWatch.create_instance()
         logger.info('start write csv\tpath: {}\tdelimiter: {}\tencoding: {}'.
                     format(file_path, delimiter, encoding))
         outf = open(file_path, 'w', encoding=encoding)
