@@ -1,2 +1,3 @@
 from .stopwatch import StopWatch
-__all__=['StopWatch']
+from .dateutils import DateUtils
+__all__=['StopWatch','DateUtils']
