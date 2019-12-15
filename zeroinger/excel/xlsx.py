@@ -42,7 +42,10 @@ class XLSX:
         for i in range(1, len(cache)):
             data = {}
             for j in range(len(keys)):
-                data[keys[j]] = cache[i][j]
+                if len(cache[i]) < j + 1:
+                    data[keys[j]] = None
+                else:
+                    data[keys[j]] = cache[i][j]
             ret.append(data)
 
         return ret
