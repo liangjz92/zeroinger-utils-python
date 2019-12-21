@@ -1,6 +1,7 @@
 import dateutil
 import arrow
 from datetime import datetime
+from datetime import timedelta
 from dateutil.parser import parse
 
 
@@ -88,8 +89,8 @@ class DateUtils:
         pass
 
     @staticmethod
-    def add_time(base, year=None, month=None, day=None, hour=None, minute=None, second=None, millisecond=None,
-                 microsecond=None):
+    def add_time(base, year=0, month=0, day=0, hour=0, minute=0, second=0, millisecond=0,
+                 microsecond=0):
         """
         
         :param base: 
@@ -103,7 +104,9 @@ class DateUtils:
         :param microsecond: 
         :return: 
         """
-        # delta =
+        delta = timedelta(days=year * 365 + month * 31 + day, hours=hour, minutes=minute,
+                          seconds=second, milliseconds=millisecond, microseconds=microsecond)
+        return base + delta
         pass
 
     @staticmethod
@@ -131,12 +134,12 @@ class DateUtils:
         # a = datetime.now()
         # b = datetime.now()
         # diff=(b-a)
-        ret['year'] = int(diff.days/365)
-        ret['month'] = int(diff.days/31)
+        ret['year'] = int(diff.days / 365)
+        ret['month'] = int(diff.days / 31)
         ret['day'] = diff.days
-        ret['hour'] = ret['day'] * 24 + diff.seconds%3600
-        ret['minute'] = ret['day']*24 * 60 + diff.seconds%60
-        ret['second'] = ret['day']*24 * 60 * 60 + diff.seconds
+        ret['hour'] = ret['day'] * 24 + diff.seconds % 3600
+        ret['minute'] = ret['day'] * 24 * 60 + diff.seconds % 60
+        ret['second'] = ret['day'] * 24 * 60 * 60 + diff.seconds
 
         ret['millisecond'] = ret['second'] * 1000 + int(diff.microseconds / 1000)
         ret['microsecond'] = ret['second'] * 1000000 + diff.microseconds

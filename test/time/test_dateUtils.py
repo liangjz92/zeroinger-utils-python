@@ -38,8 +38,10 @@ class TestDateUtils(TestCase):
         # self.fail()
 
     def test_add_time(self):
-        pass
-        # self.fail()
+        a = DateUtils.of(2019, 1, 2, 3, 4, 5, 6, 7)
+        b = DateUtils.add_time(a, -1, 1, 1, 1, 1, 1, 1, 1)
+        logger.info('test_add_time|{}|{}'.format(DateUtils.date2str(a), DateUtils.date2str(b)))
+        self.assertEqual('2018-02-03 04:05:06.007', DateUtils.date2str(b))
 
     def test_time_delta_with_diff_unit(self):
         start = DateUtils.of(2019, 1, 2, 3, 4, 5, 6, 7)
@@ -47,5 +49,5 @@ class TestDateUtils(TestCase):
         logger.info('时间差{}'.format(DateUtils.time_delta_with_diff_unit(end, start)))
         # self.fail()
 
-    # def test_time_diff_by(self):
-    #     self.fail()
+        # def test_time_diff_by(self):
+        #     self.fail()
