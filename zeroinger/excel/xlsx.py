@@ -12,7 +12,7 @@ class XLSX:
         pass
 
     @staticmethod
-    def read_dict_sheet(xlsx_path, sheet_id_or_name=0):
+    def read_dict_sheet(xlsx_path: str, sheet_id_or_name=0) -> list:
         """
         
         :param xlsx_path: xlsx文件路径
@@ -53,7 +53,7 @@ class XLSX:
         pass
 
     @staticmethod
-    def write_dict_sheet(xlsx_path, list_of_dict, sheet_name='sheet1'):
+    def write_dict_sheet(xlsx_path: str, list_of_dict: list, sheet_name='sheet1') -> None:
         """
         
         :param xlsx_path: 文件存储路径文件名

@@ -4,12 +4,12 @@ import requests
 
 
 class DingSender:
-    def __init__(self, access_key):
+    def __init__(self, access_key: str):
         # 钉钉机器人的webhook地址
         self._url = 'https://oapi.dingtalk.com/robot/send?access_token={}'.format(access_key)
         logger.info('DingSender|object init done')
 
-    def send_msg_to_robot(self, msg_text, is_at_all=False, at_mobile_list=None):
+    def send_msg_to_robot(self, msg_text: str, is_at_all: bool = False, at_mobile_list: list = None) -> None:
         if at_mobile_list is None:
             at_mobile_list = []
         headers = {"Content-Type": "application/json ;charset=utf-8"}

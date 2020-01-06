@@ -2,11 +2,8 @@ from logzero import logger
 
 
 class TextFile:
-    def __init__(self):
-        pass
-
     @staticmethod
-    def load_lines(file_path, encoding='utf-8'):
+    def load_lines(file_path: str, encoding: str = 'utf-8') -> list:
         """
         :param file_path: file path
         :param encoding: default utf-8 
@@ -22,7 +19,7 @@ class TextFile:
         pass
 
     @staticmethod
-    def dump_lines(file_path, list_of_line, encoding='utf-8'):
+    def dump_lines(file_path: str, list_of_line: list, encoding: str = 'utf-8') -> None:
         """
         :param file_path: 
         :param list_of_line: 
@@ -37,7 +34,7 @@ class TextFile:
         pass
 
     @staticmethod
-    def load_dict(file_path, encoding='utf-8', delimiter='\t'):
+    def load_dict(file_path: str, encoding: str = 'utf-8', delimiter: str = '\t') -> dict:
         """
         文件中包含多行，每个多个元素，以 delimiter代表的字符作为分割，载入为dict
         :param file_path: 
@@ -57,7 +54,7 @@ class TextFile:
         return data
 
     @staticmethod
-    def dump_dict(file_path, dict_data, encoding='utf-8', delimiter='\t'):
+    def dump_dict(file_path: str, dict_data: dict, encoding: str = 'utf-8', delimiter: str = '\t') -> None:
         """
         :param file_path: 
         :param dict_data: 

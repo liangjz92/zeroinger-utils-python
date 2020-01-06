@@ -8,13 +8,13 @@ class ConfigParserUtil:
     def get_instance(folder_path, file_name):
         return ConfigParserUtil(folder_path, file_name)
 
-    def __init__(self, folder_path, file_name):
+    def __init__(self, folder_path:str, file_name:str):
         self._folder_path = folder_path
         self._file_name = file_name
         self._config_file_path = os.path.join(self._folder_path, self._file_name)
         logger.info("配置文件地址:{}".format(self._config_file_path))
 
-    def read_value(self, group_name, key_name):
+    def read_value(self, group_name:str, key_name:str):
         """
         指定group，key读取值
         :param group_name: 

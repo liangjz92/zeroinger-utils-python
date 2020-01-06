@@ -12,7 +12,7 @@ class CSV:
         pass
 
     @staticmethod
-    def read_dict_csv(file_path, delimiter=default_delimiter, encoding=default_encoding):
+    def read_dict_csv(file_path: str, delimiter: str = default_delimiter, encoding: str = default_encoding) -> list:
         """
         读取一个带header的CSV文件，返回数据格式为list of dict
         :param file_path: 
@@ -34,7 +34,8 @@ class CSV:
         pass
 
     @staticmethod
-    def write_dict_csv(file_path, list_of_dict, delimiter=default_delimiter, encoding=default_encoding, headers=None):
+    def write_dict_csv(file_path: str, list_of_dict: list, delimiter: str = default_delimiter,
+                       encoding: str = default_encoding, headers: list = None) -> None:
         """
         将list of dict数据写入CSV，如果不指定headers，则会自动根据数据内容生成header列表
         :param file_path: 
@@ -63,7 +64,7 @@ class CSV:
         pass
 
     @staticmethod
-    def read_list_csv(file_path, delimiter=default_delimiter, encoding=default_encoding):
+    def read_list_csv(file_path: str, delimiter: str = default_delimiter, encoding: str = default_encoding) -> list:
         """
         读取无头部的csv，每行多个元素，返回数据格式为 list of list
         :param file_path: 
@@ -85,7 +86,8 @@ class CSV:
         pass
 
     @staticmethod
-    def write_list_csv(file_path, list_of_list, delimiter=default_delimiter, encoding=default_encoding):
+    def write_list_csv(file_path: str, list_of_list: list, delimiter: str = default_delimiter,
+                       encoding: str = default_encoding) -> None:
         """
         写入多行数据，每行有多个数据组成
         :param file_path: 
@@ -107,7 +109,7 @@ class CSV:
         pass
 
     @staticmethod
-    def read_line_csv(file_path, delimiter=default_delimiter, encoding=default_encoding):
+    def read_line_csv(file_path: str, delimiter: str = default_delimiter, encoding: str = default_encoding) -> list:
         timer = StopWatch.create_instance()
         logger.info(
             'start read csv\tpath: {}\tdelimiter: {}\tencoding: {}'.format(file_path, delimiter, encoding))
@@ -130,7 +132,8 @@ class CSV:
         pass
 
     @staticmethod
-    def write_line_csv(file_path, lines, delimiter=default_delimiter, encoding=default_encoding):
+    def write_line_csv(file_path: str, lines: list, delimiter: str = default_delimiter,
+                       encoding: str = default_encoding) -> None:
         """
         写入CSV，每行只有一个元素
         :param file_path: 

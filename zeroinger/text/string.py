@@ -1,11 +1,11 @@
 class StringUtils:
     @staticmethod
-    def is_empty_str(text):
-        '''
+    def is_empty(text: str) -> bool:
+        """
         判断这个字符串是否为空
         :param text: 
         :return: 
-        '''
+        """
         if text is None:
             return True
         c = text.strip()
