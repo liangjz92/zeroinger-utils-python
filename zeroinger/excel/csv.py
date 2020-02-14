@@ -28,7 +28,7 @@ class CSV:
             reader = csv.DictReader(csvfile, delimiter=delimiter)
             for row in reader:
                 list_of_dict.append(row)
-        time_cost = timer.duriation()
+        time_cost = timer.duration()
         logger.info('done read csv, time cost: {}'.format(time_cost))
         return list_of_dict
         pass
@@ -59,7 +59,7 @@ class CSV:
         for row in list_of_dict:
             writer.writerow(row)
         outf.close()
-        time_cost = timer.duriation()
+        time_cost = timer.duration()
         logger.info('done write csv, time cost: {}'.format(time_cost))
         pass
 
@@ -80,7 +80,7 @@ class CSV:
             reader = csv.reader(csvfile, delimiter=delimiter)
             for row in reader:
                 list_of_list.append(row)
-        time_cost = timer.duriation()
+        time_cost = timer.duration()
         logger.info('done read csv, time cost: {}'.format(time_cost))
         return list_of_list
         pass
@@ -104,7 +104,7 @@ class CSV:
         for row in list_of_list:
             writer.writerow(row)
         outf.close()
-        time_cost = timer.duriation()
+        time_cost = timer.duration()
         logger.info('done write csv, time cost: {}'.format(time_cost))
         pass
 
