@@ -129,11 +129,7 @@ class DateUtils:
         :return: 
         """
         diff = end - start
-        print(diff)
         ret = {}
-        # a = datetime.now()
-        # b = datetime.now()
-        # diff=(b-a)
         ret['year'] = int(diff.days / 365)
         ret['month'] = int(diff.days / 31)
         ret['day'] = diff.days

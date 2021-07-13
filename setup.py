@@ -19,6 +19,7 @@ EMAIL = 'liangjianzeng@qq.com   '
 AUTHOR = 'liangjz'
 REQUIRES_PYTHON = '>=3.6.0'
 VERSION = None
+include_package_data=True
 
 # What packages are required for this module to be executed?
 REQUIRED = [

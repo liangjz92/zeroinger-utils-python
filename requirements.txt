@@ -4,3 +4,4 @@ arrow
 configparser
 requests
 pyexcel
+pyahocorasick
